@@ -6,7 +6,13 @@ import Main from './screens/Main';
 const Stack = createStackNavigator();
 
 const Routes = () => (
-  <Stack.Navigator>
+  <Stack.Navigator
+    screenOptions={{
+      headerStyle: {
+        backgroundColor: '#DA552F',
+      },
+      headerTintColor: '#FFF',
+    }}>
     <Stack.Screen name="Main" component={Main} />
   </Stack.Navigator>
 );
