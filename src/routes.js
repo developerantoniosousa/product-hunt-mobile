@@ -2,6 +2,7 @@ import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
 
 import Main from './screens/Main';
+import Product from './screens/Product';
 
 const Stack = createStackNavigator();
 
@@ -17,6 +18,11 @@ const Routes = () => (
       name="Main"
       component={Main}
       options={Main.navigationOptions}
+    />
+    <Stack.Screen
+      name="Product"
+      component={Product}
+      options={Product.navigationOptions}
     />
   </Stack.Navigator>
 );

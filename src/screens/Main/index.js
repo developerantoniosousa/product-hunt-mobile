@@ -38,11 +38,18 @@ class Main extends Component {
     this.loadProducts(pageNumber);
   };
 
+  handleNavigateToProductScreen = (product) => {
+    const {navigation} = this.props;
+    navigation.navigate('Product', {product});
+  };
+
   renderItem = ({item}) => (
     <View style={styles.productContainer}>
       <Text style={styles.productTitle}>{item.title}</Text>
       <Text style={styles.productDescription}>{item.description}</Text>
-      <TouchableOpacity style={styles.productButton} onPress={() => {}}>
+      <TouchableOpacity
+        style={styles.productButton}
+        onPress={() => this.handleNavigateToProductScreen(item)}>
         <Text style={styles.productButtonText}>Acessar</Text>
       </TouchableOpacity>
     </View>
