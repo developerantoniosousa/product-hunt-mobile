@@ -13,7 +13,11 @@ const Routes = () => (
       },
       headerTintColor: '#FFF',
     }}>
-    <Stack.Screen name="Main" component={Main} />
+    <Stack.Screen
+      name="Main"
+      component={Main}
+      options={Main.navigationOptions}
+    />
   </Stack.Navigator>
 );
 
